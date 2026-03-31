@@ -153,10 +153,7 @@ ul {
   border-radius: 999px;
   font-size: 15px;
   font-weight: 700;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .btn-primary {
@@ -168,6 +165,7 @@ ul {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 24px 70px rgba(0, 47, 167, 0.22);
+  background-color: var(--muted);
 }
 
 .burger {
@@ -326,8 +324,9 @@ ul {
   }
 
   .btn,
-  .mobile-menu .btn {
-    width: max-content;
+  .mobile-menu .btn,
+  .fit-btn {
+    min-height: 40px;
   }
 }
 
@@ -1306,8 +1305,12 @@ ul {
   }
 
   .contact-btn {
-    height: 56px;
+    height: 45px;
     font-size: 14px;
+  }
+
+  .fit-btn {
+    min-height: 45px;
   }
 
   .contacts-actions {
@@ -1495,7 +1498,7 @@ ul {
     font-size: 18vw;
   }
   .fit-btn {
-    font-size: 14px;
+    font-size: 12px;
   }
   .fit-layout {
     gap: 20px;
@@ -1529,4 +1532,25 @@ ul {
   #contacts .section-head {
     margin-bottom: 0;
   }
+}
+
+.burger {
+  position: relative;
+}
+
+.burger span {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
