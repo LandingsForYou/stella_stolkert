@@ -2398,7 +2398,7 @@ body.modal-open {
   .program-modal-dialog {
     width: calc(100% - 20px);
     max-height: calc(100vh - 20px);
-    margin: 60px auto;
+    margin: 10px auto;
   }
 
   .program-modal-content h3 {
