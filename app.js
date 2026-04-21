@@ -454,3 +454,12 @@ faqItems.forEach((item) => {
     }
   });
 });
+
+document.querySelectorAll(".program-modal-actions a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelectorAll(".program-modal.active").forEach((modal) => {
+      modal.classList.remove("active");
+    });
+    document.body.classList.remove("modal-open");
+  });
+});
